@@ -1,0 +1,15 @@
+<h1>Hello I'm Ravi </h1>
+<p> This is my first ruby app!!</p>
+<br>
+<hr>
+<% @coins %>
+    <% for x in @coins %>
+        <% for coin in @my_coins %>
+            <% if coin == x["symbol"] %>
+                
+                <%= x["name"]%> : $<%=x["price_usd"]%> <br>
+                Rank : <%= x["rank"]%><br><br>
+            <%end%>
+        <%end%>
+    <%end%>
+

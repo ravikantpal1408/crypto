@@ -1,0 +1,37 @@
+<h3> Search - Crypto Currency </h1>
+<hr>
+<div class="row">
+    <div class="col-sm-6">
+              
+        <%= form_tag search_path,:method=>"POST" do %>
+        
+            <%=text_field_tag 'sym', nil ,placeholder: "Enter Crypto Symbol" , class:"form-control", size: 50 %>
+            <br>
+            <%=submit_tag  "Look Up stock Quote", class:"btn btn-info" %>
+        
+        
+        <%end%>  
+        
+        <br>
+        
+        
+              <%=@symbol%>
+        <% if @symbol %>    
+            <% for x in @lookup_coin %>
+        
+                <% if @symbol == x["symbol"] %>
+                
+                    <%= x["name"]%> : $<%=x["price_usd"]%> <br>
+                    Rank : <%= x["rank"]%><br><br>
+               
+                <%end%>
+                
+        
+            <% end %>
+
+        <% else%>
+          
+        <% end %>
+    </div>
+    
+</div>
