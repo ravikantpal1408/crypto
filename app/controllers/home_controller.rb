@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
   def index
      @title="Home"
-     #require 'net/http'
-     #require 'json'
+     require 'net/http'
+     require 'json'
      
      @url = 'https://api.coinmarketcap.com/v1/ticker/'
      @uri = URI(@url)
