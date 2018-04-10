@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :cryptos
   devise_for :users
   root 'home#index'
   get 'about' ,to: "home#about"
