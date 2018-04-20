@@ -6,7 +6,7 @@ class CryptosController < ApplicationController
   # GET /cryptos
   # GET /cryptos.json
   def index
-    @cryptos = Crypto.all
+     @cryptos = Crypto.all
      require 'net/http'
      require 'json'
      
@@ -87,6 +87,7 @@ class CryptosController < ApplicationController
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
+    
     def crypto_params
       params.require(:crypto).permit(:symbol, :user_id, :cost_per, :amount_owned)
     end
