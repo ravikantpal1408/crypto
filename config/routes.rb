@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
+  get 'show_page/index'
+
   resources :cryptos
   devise_for :users
+  get 'back', to:'home/home'
   root 'home#home'
   get 'me' , to: 'home#index'
   

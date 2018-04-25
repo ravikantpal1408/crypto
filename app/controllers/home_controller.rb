@@ -1,13 +1,13 @@
 class HomeController < ApplicationController
-    
+  #layout false
   def home
       
-    render :layout => false
+   render :layout => false
     
   end
     
   def index
-     @title="Home"
+     @title="Index"
      require 'net/http'
      require 'json'
      

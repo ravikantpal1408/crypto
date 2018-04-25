@@ -1,3 +1,4 @@
+
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -8,7 +9,8 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%=link_to "Crypto Portfolio" ,root_path, class:'navbar-brand' %>
+      
+      <%=link_to "Crypto Portfolio" ,root_path , class:'navbar-brand' %>
      
     </div>
 
@@ -33,9 +35,11 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-          <li><%=link_to "Home" , root_path %></li>
+          
+          <li><%=link_to "Home" , root_path(:back =>'true') %></li>
           <li><%=link_to "About", about_path %></li>
           <li><%=link_to "Search" ,search_path ,method:"get" %></li>
+          
          
         <% if user_signed_in? %>
         
