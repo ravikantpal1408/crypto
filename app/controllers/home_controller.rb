@@ -1,4 +1,11 @@
 class HomeController < ApplicationController
+    
+  def home
+      
+    render :layout => false
+    
+  end
+    
   def index
      @title="Home"
      require 'net/http'
