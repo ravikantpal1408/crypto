@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'back', to:'home/home'
   root 'home#home'
   get 'me' , to: 'home#index'
+  get 'aboutme', to: 'home#aboutme'
   
   get 'about' ,to: "home#about"
   get 'search' , to: "home#lookup"

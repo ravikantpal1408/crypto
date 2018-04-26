@@ -1,9 +1,15 @@
 class HomeController < ApplicationController
-  #layout false
+  
   def home
-      
+     
    render :layout => false
     
+  end
+  
+  def aboutme
+      
+      @title="My Info"
+      
   end
     
   def index
