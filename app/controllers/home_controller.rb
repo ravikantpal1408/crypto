@@ -10,6 +10,7 @@ class HomeController < ApplicationController
       
       @title="My Info"
       
+      
   end
     
   def index

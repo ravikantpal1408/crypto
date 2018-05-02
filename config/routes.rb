@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  get 'blog/index'
+
   get 'show_page/index'
 
   resources :cryptos
