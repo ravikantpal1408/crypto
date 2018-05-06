@@ -14,5 +14,7 @@ Rails.application.routes.draw do
   get 'about' ,to: "home#about"
   get 'search' , to: "home#lookup"
   post 'search' => 'home#lookup'
+  get 'webservices/getCity'
+  post 'webservices/getCity'
   
 end
