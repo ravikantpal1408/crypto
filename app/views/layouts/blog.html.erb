@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <title>Blog | <%=@title%></title>
+  <link rel="shortcut icon" type="image/png" href="img/testicon.png" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<%= render 'blogs/navbar'%>
+<br>
+<br>
+  <div class="container">
+    <br>
+    <br>
+    
+    <%= yield %>
+  </div>
+</body>
+</html>
