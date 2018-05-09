@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  
+  get 'projects' , to: "home#project"
   get 'blog/index'
 
   get 'show_page/index'
