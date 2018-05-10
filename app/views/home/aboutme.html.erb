@@ -1,98 +1,12 @@
 <%= render 'home/aboutme'%>
-<style>
+  
 
-#myImg {
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
 
-#myImg:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-}
-
-/* Modal Content (image) */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-/* Caption of Modal Image */
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-}
-
-/* Add Animation */
-.modal-content, #caption {    
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
-}
-
-@-webkit-keyframes zoom {
-    from {-webkit-transform:scale(0)} 
-    to {-webkit-transform:scale(1)}
-}
-
-@keyframes zoom {
-    from {transform:scale(0)} 
-    to {transform:scale(1)}
-}
-
-/* The Close Button */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
-
-</style>
 <div class="container">
     <div class="row">
             <div class="col-sm-3">
                 
-                <img id="myImg" src="img/me1.jpg" alt="Ravi_Kant_Pal" style="width:240px;height:160px;border-radius:10px" />
+                <img id="myImg1" src="img/me1.jpg" alt="Ravi_Kant_Pal" style="width:240px;height:160px;border-radius:10px" />
                 
             </div>    
             <div class="col-sm-9">
@@ -161,19 +75,28 @@
                            <b> Projects Handeled :</b>
                         </td>
                         <td>
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default" onclick="fn_Project(1)">Uttar Pradesh Subordinate Service Commision [ Grievance ]</a> ,
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default" onclick="fn_Project(2)">Smart Waste Management (IOT)</a> ,
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default" onclick="fn_Project(3)">BTS Tower Management  (IOT)</a> ,
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default" onclick="fn_Project(4)">Uttar Pradesh Power Corposration Limited (UPPCL) Helpline</a> ,
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default" onclick="fn_Project(5)">Real Estate Regulatory Authority (RERA) UP [ Admin Module ]</a> ,
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default" onclick="fn_Project(6)">Uttar Pradesh Power Transmission Control Ltd (UPPTCL) [ Station Activity Management System ]</a> ,
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default" onclick="fn_Project(7)">Valet Vault India ( VVIPL)</a> ,
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default" onclick="fn_Project(8)">Valet Vault India ( VVIPL) Administration Module</a> ,
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default" onclick="fn_Project(9)">Valet Vault India ( VVIPL) Marshal Android App</a> ,
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default" onclick="fn_Project(10)">Valet Vault India ( Android App )</a> ,
+                            <a data-toggle="modal" data-target="#myModal" class="btn btn-default" onclick="fn_Project(11)">Ghaziabad Development Authority ( GDA ) Helpline</a> 
                             
-                            <%=link_to 'Uttar Pradesh Subordinate Service Commision [ Grievance ]' , projects_path(:code => 1 , :reload => 'true') , class: "btn btn-default" %> , 
-                            <%=link_to 'Smart Waste Management (IOT)' , projects_path(:code => 2) , class: "btn btn-default" %> ,
-                            <%=link_to 'BTS Tower Management  (IOT)' , projects_path(:code => 3) , class: "btn btn-default" %> ,
-                            <%=link_to 'Uttar Pradesh Power Corposration Limited (UPPCL) Helpline' , projects_path(:code => 4) , class: "btn btn-default" %> ,
-                            <%=link_to 'Real Estate Regulatory Authority (RERA) UP [ Admin Module ]' , projects_path(:code => 5) , class: "btn btn-default" %> ,
-                            <%=link_to 'Uttar Pradesh Power Transmission Control Ltd (UPPTCL) [ Station Activity Management System ]' , projects_path(:code => 6) , class: "btn btn-default" %> ,
-                            <%=link_to 'Valet Vault India ( VVIPL) ' , projects_path(:code => 7) , class: "btn btn-default" %> ,
-                            <%=link_to 'Valet Vault India ( VVIPL) Administration Module' , projects_path(:code => 8) , class: "btn btn-default" %> ,
-                            <%=link_to 'Valet Vault India ( VVIPL) Marshal Android App' , projects_path(:code => 9) , class: "btn btn-default" %> ,
-                            <%=link_to 'Valet Vault India ( Android App )' , projects_path(:code => 10) , class: "btn btn-default" %> ,
-                            <%=link_to 'Ghaziabad Development Authority ( GDA ) Helpline' , projects_path(:code => 11) , class: "btn btn-default" %> 
-                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <b>Contribution to Projects :</b>
+                        </td>
+                        <td>
+                            <strong>
+                                In all the above mentioned Project, I was involved for Developing, Building Logics , running and testing live.
+                            </strong>
                         </td>
                     </tr>
                 </table>
@@ -185,32 +108,211 @@
     </div>
 </div>
 
-<div id="myModal" class="modal">
-    
-  <span style="margin-top:100px" class="close">&times;</span>
-  <img class="modal-content" style="margin-top:80px" id="img01">
-  <div id="caption"></div>
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" id="txthead">Modal Header</h4>
+        </div>
+        <div class="modal-body">
+          <p id="txtPara">This is a large modal.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  <div id="myModal1" class="modal1" style="margin-top:45px">
+  <span class="close1">&times;</span>
+  <img class="modal-content1" id="img01">
+  <div id="caption1"></div>
 </div>
 
 <script>
-// Get the modal
-var modal = document.getElementById('myModal');
-
-// Get the image and insert it inside the modal - use its "alt" text as a caption
-var img = document.getElementById('myImg');
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-    modal.style.display = "none";
-}
+        // Get the modal
+        var modal = document.getElementById('myModal1');
+        
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('myImg1');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption1");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close1")[0];
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
 </script>
+
+
+
+<script>
+
+    function fn_Project(code)
+    {
+        
+        switch(code)
+        {
+            case 1:
+                $("#txthead").html("Uttar Pradesh Subordinate Service Commision [ Grievance ]");
+                $("#txtPara").html("This module in the on-going project helps candidate to enquire, Suggest or give feedbacks regarding exams conducted by UPSSSC( Uttar Pradesh Subordinate Service Selection Commission )")
+                
+             
+            break;
+            case 2:
+                $("#txthead").html("Smart Waste Management (IOT)");
+                $("#txtPara").html("IOT based web application helps to locate, monitor, configure SMART-BIN(s) on google map. Enables civil bodies to plan and manage disposal of waste ergonomically and efficiently. Application inculcate proper user authorisation and authentication. Interactive UI elements like google map showing SMART-BINs map-marker with different colours showing level of emptiness, Battery levels of sensor(s). Region-wise filter to locate and get information of SMART-BINs.");
+            break;
+            case 3:
+                $("#txthead").html("BTS Tower Management  (IOT)");
+                $("#txtPara").html("IOT based Web Application helps to Monitor BASE TRANSCEIVER STATION (BTS) towers. Utilises Push-Nofications to indicate POWER cycle which is being managed through this web- app. Its a small web application which display data frames from sensors and manages POWER Cycle of BTS-TOWER");
+            break;
+            case 4:
+                $("#txthead").html("Uttar Pradesh Power Corposration Limited (UPPCL) Helpline");
+                $("#txtPara").html("Web Application is divided into 3 parts. Admin, Officer, User. ADMIN manipulates all the functionality and authority , OFFICER manages COMPLAINT module , USER register Complaint associated with specific department. Application also notifies Complainee with SMS and email notifications.");
+            break;
+            case 5:
+                $("#txthead").html("Real Estate Regulatory Authority (RERA) UP [ Admin Module ]");
+                $("#txtPara").html("A part of ongoing govt based web portal where administrator monitors status of all functionality of web portal like user complaints, on-going and new projects of builder, revenues collection reports and more.");
+            break;
+            case 6:
+                $("#txthead").html("Uttar Pradesh Power Transmission Control Ltd (UPPTCL) [ Station Activity Management System ]");
+                $("#txtPara").html("This .net MVC based project allows authority to add/edit/delete substations where activities are going on. User can create activity for sub-station and monitors them also weekly/monthly wise.");
+            break;
+            case 7:
+                $("#txthead").html("Valet Vault India ( VVIPL)");
+                $("#txtPara").html("ValetVaultIndia, India's most popular and the only web portal for parking at PUBLIC PLACE. Modernise the city traffic by PARKING the vehicle through web technology platform with the fully skilled team. This Mobile Application enables users in BHOPAL city, India - to use VALET services. App is Deployed on Android Market currently. ");
+            break;
+            
+            case 8:
+                $("#txthead").html("Valet Vault India ( VVIPL ) Administration Module");
+                $("#txtPara").html("In this module administrator can view total booking, calculate revenues day/week/month wise, can email the generated revenue report to its mail in PDF format, can add city, locations,milestone; can also Advertising images, fanchise, partners, View all dropPoints/pickPoints on google map");
+            break;
+            case 9:
+                $("#txthead").html("Valet Vault India ( VVIPL ) Marshal Android App");
+                $("#txtPara").html("This Android App enable booked Marshal to locate Customer on google map; Also allow him set status for if he had picked Vehicle for parking and delivered Vehicle to Customer safely; It also enable set flag for payment by customer.");
+                
+            break;
+            case 10:
+                $("#txthead").html("Valet Vault India ( Android App )");
+                $("#txtPara").html("ValetVaultIndia, India's most popular and the only web portal for parking at PUBLIC PLACE. Modernise the city traffic by PARKING the vehicle through web technology platform with the fully skilled team. This Mobile Application enables users in BHOPAL city, India - to use VALET services. App is Deployed on Android Market currently. ");
+                
+            break;
+            case 11:
+                $("#txthead").html("Ghaziabad Development Authority ( GDA ) Helpline");
+                $("#txtPara").html("A web application where Property holder can register complaint online. Application is divided into 3 portion ADMIN, OFFICER, USER. USER manages the complaint module and takes call registers the complaint through call. OFFICER manages the complaint regarding is department - sets the status of complaint and resolved or disposed according once the complaint is registered OFFICER also gets notified through email and SMS . ADMIN supervise all the privileges and have supreme authority to create OFFICER,USER , DEPARTMENT etc.");
+                
+            break;
+            default:
+                $("#mdHeader").html("");
+                $("#mdText").html("");
+            break
+        
+            
+            
+        }
+    }
+</script>
+
+<style>
+                
+            #myImg1 {
+                border-radius: 5px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+            
+            #myImg1:hover {opacity: 0.7;}
+            
+            /* The Modal (background) */
+            .modal1 {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+            }
+            
+            /* Modal Content (image) */
+            .modal-content1 {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+            }
+            
+            /* Caption of Modal Image */
+            #caption1 {
+                margin: auto;
+                display: block;
+                width: 80%;
+                max-width: 700px;
+                text-align: center;
+                color: #ccc;
+                padding: 10px 0;
+                height: 150px;
+            }
+            
+            /* Add Animation */
+            .modal-content1, #caption {    
+                -webkit-animation-name: zoom;
+                -webkit-animation-duration: 0.6s;
+                animation-name: zoom;
+                animation-duration: 0.6s;
+            }
+            
+            @-webkit-keyframes zoom {
+                from {-webkit-transform:scale(0)} 
+                to {-webkit-transform:scale(1)}
+            }
+            
+            @keyframes zoom {
+                from {transform:scale(0)} 
+                to {transform:scale(1)}
+            }
+            
+            /* The Close Button */
+            .close1 {
+                position: absolute;
+                top: 15px;
+                right: 35px;
+                color: #f1f1f1;
+                font-size: 40px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+            
+            .close1:hover,
+            .close1:focus {
+                color: #bbb;
+                text-decoration: none;
+                cursor: pointer;
+            }
+            
+            /* 100% Image Width on Smaller Screens */
+            @media only screen and (max-width: 700px){
+                .modal-content1 {
+                    width: 100%;
+                }
+            }
+</style>

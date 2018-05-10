@@ -5,10 +5,7 @@ class HomeController < ApplicationController
    render :layout => false
     
   end
-  def project
-      @title="Projects"
-      render :layout => false
-  end
+ 
   
   def aboutme
       
