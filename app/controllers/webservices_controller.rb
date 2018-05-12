@@ -9,7 +9,7 @@ class WebservicesController < ApplicationController
    
    def getPlaces
       placeid = params[:cityid]
-      @loc = Place.select('id,placename,lat,lon').where(cityid: placeid ).all
+      @loc = Place.select('id,placename').where(cityid: placeid ).all
       render json: @loc
    end
        
