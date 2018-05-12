@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180508161309) do
+ActiveRecord::Schema.define(version: 20180512154050) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "name"
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(version: 20180508161309) do
   end
 
   add_index "cryptos", ["user_id"], name: "index_cryptos_on_user_id"
+
+  create_table "places", force: :cascade do |t|
+    t.integer  "cityid"
+    t.string   "placename"
+    t.string   "lat"
+    t.string   "lon"
+    t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
