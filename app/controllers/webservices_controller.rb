@@ -17,7 +17,7 @@ class WebservicesController < ApplicationController
       #byebug
       cityid = params[:cityid]
       placeid = params[:pID]
-      @cordinated = Place.select("id,cityid,lat,lon").where(id: cityid).where(cityid: placeid)
+      @cordinated = Place.select("id,cityid,lat,lon").where(id: placeid ).where(cityid: cityid)
       render json: @cordinated
    end
        
