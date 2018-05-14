@@ -21,5 +21,5 @@ Rails.application.routes.draw do
   get 'webservices/getCity'
   get 'webservices/getPlaces'
   #post 'webservices/getCity'
-  post 'webservices/getMyLoc'
+  get 'webservices/getMyLoc'
 end
