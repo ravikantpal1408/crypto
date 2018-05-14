@@ -12,5 +12,13 @@ class WebservicesController < ApplicationController
       @loc = Place.select('id,placename').where(cityid: placeid ).all
       render json: @loc
    end
+   
+   def getMyLoc
+      #byebug
+      cityid = params[:cityid]
+      placeid = params[:pID]
+      @cordinated = Place.select("id,cityid,lat,lon").where(id: cityid).where(cityid: placeid)
+      render json: @cordinated
+   end
        
 end
