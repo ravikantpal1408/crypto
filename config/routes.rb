@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   get 'webservices/getPlaces'
   #post 'webservices/getCity'
   get 'webservices/getMyLoc'
+  get 'myblogs' , to: 'home#blogspage'
 end
