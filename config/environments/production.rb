@@ -77,6 +77,17 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
   # config.action_mailer.default_url_options = { host: 'www.mycryptoportaltree.com' }
-  config.action_mailer.default_url_options = { host: 'https://git.heroku.com/cryptopal1408.git' }
+  config.action_mailer.default_url_options = { host: 'cryptopal1408.herokuapp.com' }
+  
+  ActionMailer::Base.smtp_settings = {
+       :enable_starttls_auto => true,
+       :address            => 'smtp.gmail.com',
+       :port               => 587,
+       :domain             => 'crypto.ruby.1501@gmail.com',
+       :authentication     => 'plain',
+       :user_name          => 'cryptopal1408.herokuapp.com',
+       :password           => 'ravi1408' 
+    }
+
 
 end

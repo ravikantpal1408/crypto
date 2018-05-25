@@ -38,6 +38,16 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'https://crypto-app-ravi1408.c9users.io/' }
+  
+  ActionMailer::Base.smtp_settings = {
+       :enable_starttls_auto => true,
+       :address            => 'smtp.gmail.com',
+       :port               => 587,
+       :domain             => 'crypto.ruby.1501@gmail.com',
+       :authentication     => 'plain',
+       :user_name          => 'cryptopal1408.herokuapp.com',
+       :password           => 'ravi1408' 
+    }
 
 end

@@ -58,6 +58,11 @@ class HomeController < ApplicationController
        
         
   end
+  def blogspage
+      
+      render :layout => false
+      
+  end
   
   
 end
