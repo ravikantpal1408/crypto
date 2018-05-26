@@ -1,5 +1,6 @@
 class WebservicesController < ApplicationController
-   protect_from_forgery with: :exception
+   
+   protect_from_forgery with: :null_session
    layout false
    def getCity
       #@city = City.find(:select => "id,cityname")
@@ -20,5 +21,16 @@ class WebservicesController < ApplicationController
       @cordinated = Place.select("id,cityid,lat,lon").where(id: placeid ).where(cityid: cityid)
       render json: @cordinated
    end
+   
+   def getmyblog
+      
+      
+      @myblogs = Blog.find(params[:bid])
+      
+      
+      render json: @myblogs
+      
+   end
+   
        
 end
