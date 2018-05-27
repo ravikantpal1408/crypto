@@ -3,7 +3,7 @@
 jQuery(document).ready(function(){
     
     var blogid = getParameterByName("blog");
-    alert(blogid)
+    //alert(blogid)
     
     if(blogid != "" || blogid!= null)
     {
