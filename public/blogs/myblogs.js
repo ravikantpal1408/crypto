@@ -20,17 +20,18 @@ function getMyBlog(id)
     $.ajax({
         type: 'POST',
         url: '/myBlog',
-        data: "{'id': '" + id + "'}",
-        dataType: "json",
-        contentType: "application/json; charset=utf-8",
-        success: function(res){
+        data: { 'blogid' : id },
+        // contentType: "application/json; charset=utf-8", 
+        // dataType: "json",
+        success: function(data){
             
             //alert(JSON.stringify(res))
-            console.log(res)
+            console.log(data)
             
         },
-        error: function(err){
-            console.log(err)
+        error: function(errorThrown){
+            
+            console.log(errorThrown)
         }
         
         

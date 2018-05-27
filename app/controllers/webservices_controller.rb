@@ -24,13 +24,17 @@ class WebservicesController < ApplicationController
    
    def getmyblog
       
+      bid = params[:blogid]
       
-      @myblogs = Blog.find(params[:bid])
+      @b = Blog.find(bid)
+      
+      render json: @b
       
       
-      render json: @myblogs
       
    end
+   
+   
    
        
 end
