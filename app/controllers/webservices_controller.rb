@@ -35,6 +35,18 @@ class WebservicesController < ApplicationController
    end
    
    
+   def checkRegisteredVehicle
+      uid = params[:uid]
+      @message = 'not found' 
+      @getVeh = Profile.find_by_uid(uid)
+      if @getVeh
+         render json: @getVeh
+      else
+         render json: @message
+      end
+   end
+   
+   
    
        
 end

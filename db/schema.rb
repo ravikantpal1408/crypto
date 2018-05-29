@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180512154050) do
+ActiveRecord::Schema.define(version: 20180527111837) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "name"
@@ -52,6 +52,16 @@ ActiveRecord::Schema.define(version: 20180512154050) do
     t.string   "lat"
     t.string   "lon"
     t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "profiles", force: :cascade do |t|
+    t.string   "uid"
+    t.string   "name"
+    t.string   "carnumber"
+    t.string   "brand"
+    t.string   "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

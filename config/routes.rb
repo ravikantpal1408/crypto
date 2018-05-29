@@ -25,5 +25,5 @@ Rails.application.routes.draw do
   get 'myblogs' , to: 'home#blogspage'
   post 'myBlog',to: 'webservices#getmyblog'
   #get 'testblog',to: 'webservices#getmyblog'
-  
+  get 'webservices/checkRegisteredVehicle'
 end

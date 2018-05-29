@@ -27,6 +27,12 @@ function getMyBlog(id)
             
             //alert(JSON.stringify(res))
             console.log(data)
+       
+                console.log(data.id)
+                $("#ct_heading").html(data.title);
+                $("#ct_content").html(data.content);
+                
+       
             
         },
         error: function(errorThrown){
