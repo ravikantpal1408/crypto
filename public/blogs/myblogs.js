@@ -18,12 +18,12 @@ jQuery(document).ready(function(){
 function getMyBlog(id)
 {
     console.log(id)
-    $.post({
+    $.get({
         //type: 'POST',
         url: '/myBlog?blogid=' + id ,
         //data: { 'blogid' : id },
-        // contentType: "application/json; charset=utf-8", 
-        // dataType: "json",
+        contentType: "application/json; charset=utf-8", 
+        dataType: "json",
         success: function(data){
             
             //alert(JSON.stringify(res))
