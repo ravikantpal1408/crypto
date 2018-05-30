@@ -20,7 +20,7 @@ function getMyBlog(id)
     console.log(id)
     $.get({
         //type: 'POST',
-        url: '/home/getmyblog?blogid=' + id ,
+        url: '/webservices/getselectedblog?blogid=' + id ,
         //data: { 'blogid' : id },
         contentType: "application/json; charset=utf-8", 
         dataType: "json",

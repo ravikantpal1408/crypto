@@ -23,6 +23,15 @@ class WebservicesController < ApplicationController
    end
    
    
+   def getselectedblog
+     if params[:blogid] 
+         bid = params[:blogid]
+         @b = Blog.find(bid)
+         render json: @b
+      end
+  end
+   
+   
    
    def checkRegisteredVehicle
       uid = params[:uid]
