@@ -18,8 +18,8 @@ jQuery(document).ready(function(){
 function getMyBlog(id)
 {
     console.log(id)
-    $.ajax({
-        type: 'POST',
+    $.post({
+        //type: 'POST',
         url: '/myBlog',
         data: { 'blogid' : id },
         // contentType: "application/json; charset=utf-8", 
