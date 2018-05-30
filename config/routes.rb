@@ -35,8 +35,8 @@ Rails.application.routes.draw do
   
   get 'webservices/checkRegisteredVehicle'
   
-  get 'webservices/iamravi'
+  #get 'webservices/iamravi'
 
-  get 'webservices/getselectedblog'
+  #get 'webservices/getselectedblog'
   
 end

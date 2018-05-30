@@ -31,10 +31,10 @@ class WebservicesController < ApplicationController
       end
    end
    
-   def iamravi
-      @ = Blog.find(params[:blogid])
-      render json: @b
-   end
+   # def iamravi
+   #    @ = Blog.find(params[:blogid])
+   #    render json: @b
+   # end
    
    
    
