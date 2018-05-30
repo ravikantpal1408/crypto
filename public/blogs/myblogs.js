@@ -22,8 +22,8 @@ function getMyBlog(id)
         type: 'POST',
         url: '/myBlog',
         data: { 'blogid' : id },
-        // contentType: "application/json; charset=utf-8", 
-        // dataType: "json",
+        contentType: "application/json; charset=utf-8", 
+        dataType: "json",
         success: function(data){
             
             //alert(JSON.stringify(res))
