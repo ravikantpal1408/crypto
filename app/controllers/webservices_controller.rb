@@ -22,13 +22,6 @@ class WebservicesController < ApplicationController
       render json: @cordinated
    end
    
-   def getmyblog
-      
-      bid = params[:blogid]
-      @b = Blog.find(bid)
-      render json: @b
-      
-   end
    
    
    def checkRegisteredVehicle
