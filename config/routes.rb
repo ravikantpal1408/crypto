@@ -34,6 +34,8 @@ Rails.application.routes.draw do
   #get 'testblog',to: 'webservices#getmyblog'
   
   get 'webservices/checkRegisteredVehicle'
+  
+  get 'webservices/iamravi'
 
   get 'webservices/getselectedblog'
   
