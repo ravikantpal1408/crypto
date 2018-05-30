@@ -20,8 +20,8 @@ function getMyBlog(id)
     console.log(id)
     $.post({
         //type: 'POST',
-        url: '/myBlog',
-        data: { 'blogid' : id },
+        url: '/myBlog?blogid=' + id ,
+        //data: { 'blogid' : id },
         // contentType: "application/json; charset=utf-8", 
         // dataType: "json",
         success: function(data){
