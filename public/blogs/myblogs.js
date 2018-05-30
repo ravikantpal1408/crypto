@@ -17,6 +17,7 @@ jQuery(document).ready(function(){
 
 function getMyBlog(id)
 {
+    console.log(id)
     $.ajax({
         type: 'POST',
         url: '/myBlog',
