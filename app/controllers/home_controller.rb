@@ -64,13 +64,7 @@ class HomeController < ApplicationController
       
   end
   
-  def getmyblog
-      
-     bid = params[:blogid]
-     @b = Blog.find(bid)
-     render json: @b
-      
-  end
+  
    
   
   

@@ -18,12 +18,23 @@ Rails.application.routes.draw do
   
   
   #WebServices Routes
+
   get 'webservices/getCity'
+
   get 'webservices/getPlaces'
+
   #post 'webservices/getCity'
+
   get 'webservices/getMyLoc'
+
   get 'myblogs' , to: 'home#blogspage'
-  get 'webservices/getselectedblog'
+  
+  
+  
   #get 'testblog',to: 'webservices#getmyblog'
+  
   get 'webservices/checkRegisteredVehicle'
+
+  get 'webservices/getselectedblog'
+  
 end

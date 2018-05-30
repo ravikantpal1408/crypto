@@ -24,12 +24,12 @@ class WebservicesController < ApplicationController
    
    
    def getselectedblog
-     if params[:blogid] 
+      if params[:blogid] 
          bid = params[:blogid]
          @b = Blog.find(bid)
          render json: @b
       end
-  end
+   end
    
    
    
